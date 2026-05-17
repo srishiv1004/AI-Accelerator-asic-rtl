@@ -1,0 +1,45 @@
+CNN Hardware Model Summary
+==========================
+
+Input: 128x128x3
+
+Layer: conv2d
+  Type   : Conv2D
+  Input  : 128x128x3
+  Output : 126x126x32
+  Kernel : 3x3  Stride:1  Pad:0
+  Opcode : 1010  (maxpool+quantize)
+  Weights: 864 INT8  scale=0.001326
+  Biases : 32 INT32
+  Last   : False
+
+Layer: conv2d_1
+  Type   : Conv2D
+  Input  : 63x63x32
+  Output : 61x61x64
+  Kernel : 3x3  Stride:1  Pad:0
+  Opcode : 1010  (maxpool+quantize)
+  Weights: 18432 INT8  scale=0.001669
+  Biases : 64 INT32
+  Last   : False
+
+Layer: conv2d_2
+  Type   : Conv2D
+  Input  : 30x30x64
+  Output : 28x28x128
+  Kernel : 3x3  Stride:1  Pad:0
+  Opcode : 1010  (maxpool+quantize)
+  Weights: 73728 INT8  scale=0.001262
+  Biases : 128 INT32
+  Last   : False
+
+Layer: conv2d_3
+  Type   : Conv2D
+  Input  : 14x14x128
+  Output : 12x12x256
+  Kernel : 3x3  Stride:1  Pad:0
+  Opcode : 1010  (maxpool+quantize)
+  Weights: 294912 INT8  scale=0.001090
+  Biases : 256 INT32
+  Last   : True
+

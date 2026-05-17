@@ -1,0 +1,142 @@
+{
+  "input_shape": [
+    128,
+    128,
+    3
+  ],
+  "num_layers": 4,
+  "layers": [
+    {
+      "index": 0,
+      "name": "conv2d",
+      "type": "conv2d",
+      "is_last": false,
+      "simd_opcode": "1010",
+      "simd_opcode_sv": "4'b1010",
+      "in_h": 128,
+      "in_w": 128,
+      "in_c": 3,
+      "out_c": 32,
+      "k_h": 3,
+      "k_w": 3,
+      "stride": 1,
+      "pad": 0,
+      "out_h": 126,
+      "out_w": 126,
+      "real_m": 27,
+      "pool_k": 2,
+      "pool_st": 2,
+      "weight_scale": 0.0013256981037557125,
+      "weight_byte_offset": 0,
+      "weight_byte_size": 864,
+      "bias_byte_offset": 0,
+      "bias_byte_size": 32,
+      "weight_shape": [
+        27,
+        32
+      ],
+      "bias_shape": [
+        32
+      ]
+    },
+    {
+      "index": 1,
+      "name": "conv2d_1",
+      "type": "conv2d",
+      "is_last": false,
+      "simd_opcode": "1010",
+      "simd_opcode_sv": "4'b1010",
+      "in_h": 63,
+      "in_w": 63,
+      "in_c": 32,
+      "out_c": 64,
+      "k_h": 3,
+      "k_w": 3,
+      "stride": 1,
+      "pad": 0,
+      "out_h": 61,
+      "out_w": 61,
+      "real_m": 288,
+      "pool_k": 2,
+      "pool_st": 2,
+      "weight_scale": 0.0016690129414200783,
+      "weight_byte_offset": 864,
+      "weight_byte_size": 18432,
+      "bias_byte_offset": 128,
+      "bias_byte_size": 64,
+      "weight_shape": [
+        288,
+        64
+      ],
+      "bias_shape": [
+        64
+      ]
+    },
+    {
+      "index": 2,
+      "name": "conv2d_2",
+      "type": "conv2d",
+      "is_last": false,
+      "simd_opcode": "1010",
+      "simd_opcode_sv": "4'b1010",
+      "in_h": 30,
+      "in_w": 30,
+      "in_c": 64,
+      "out_c": 128,
+      "k_h": 3,
+      "k_w": 3,
+      "stride": 1,
+      "pad": 0,
+      "out_h": 28,
+      "out_w": 28,
+      "real_m": 576,
+      "pool_k": 2,
+      "pool_st": 2,
+      "weight_scale": 0.0012616475578397512,
+      "weight_byte_offset": 19296,
+      "weight_byte_size": 73728,
+      "bias_byte_offset": 384,
+      "bias_byte_size": 128,
+      "weight_shape": [
+        576,
+        128
+      ],
+      "bias_shape": [
+        128
+      ]
+    },
+    {
+      "index": 3,
+      "name": "conv2d_3",
+      "type": "conv2d",
+      "is_last": true,
+      "simd_opcode": "1010",
+      "simd_opcode_sv": "4'b1010",
+      "in_h": 14,
+      "in_w": 14,
+      "in_c": 128,
+      "out_c": 256,
+      "k_h": 3,
+      "k_w": 3,
+      "stride": 1,
+      "pad": 0,
+      "out_h": 12,
+      "out_w": 12,
+      "real_m": 1152,
+      "pool_k": 2,
+      "pool_st": 2,
+      "weight_scale": 0.0010902911890298128,
+      "weight_byte_offset": 93024,
+      "weight_byte_size": 294912,
+      "bias_byte_offset": 896,
+      "bias_byte_size": 256,
+      "weight_shape": [
+        1152,
+        256
+      ],
+      "bias_shape": [
+        256
+      ]
+    }
+  ]
+}
