@@ -12,7 +12,7 @@ AI is moving from the cloud to the edge, but the hardware that runs it hasn't fu
 
 The accelerator turns convolution into matrix multiplication (using an Im2Col transform done directly in hardware, not in software) and feeds it through a 2D grid of Multiply-Accumulate units that pass data between neighbors instead of constantly re-reading memory. Everything else a CNN needs — activations, pooling, quantization, softmax — runs through one reconfigurable vector unit that's told what to do via a simple opcode, instead of building separate hardware for every operation.
 
-![NPU top-level architecture](docs/architecture.svg)
+![NPU top-level architecture](architecture.svg)
 
 Data enters from external DRAM into the **DRAM loader**, which splits it into an **activation SRAM** and a **weights SRAM**. The **systolic controller** feeds both into the **systolic array** as `A_FEED`/`B_FEED`. The array's 32-bit partial sums (`ACC_OUT`) pass through the **SIMD gearbox** (`PIX_OUT`), into the **SIMD vector unit**, where a 4-bit **opcode** selects ReLU, pooling, quantization, or softmax. The final result (`LAYER_OUT`) loops back to the DRAM loader for write-back to memory.
 
