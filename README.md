@@ -98,7 +98,7 @@ python hardware_accelerator/compare_outputs.py hw_out.txt golden_out.txt   # ver
 
 ## Author
 
-Built by **Shivani** as a final year engineering project.
+Built by **Shivani S** as a final year engineering project.
 
 ## License
 
