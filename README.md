@@ -100,6 +100,3 @@ python hardware_accelerator/compare_outputs.py hw_out.txt golden_out.txt   # ver
 
 Built by **Shivani S** as a final year engineering project.
 
-## License
-
-*(Add a license here — MIT is a common choice for portfolio/academic projects — if you want this open source.)*
